@@ -1,8 +1,9 @@
 const { ApolloServer } = require('apollo-server')
 const modules = require('./modules')
+const PORT = process.env.PORT || 7000
 
 const server = new ApolloServer({
     modules
 })
 
-server.listen(7000, console.log(7000 + '/graphql'))
+server.listen(PORT, console.log(PORT + '/graphql'))
