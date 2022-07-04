@@ -32,6 +32,7 @@ CREATE TABLE orders(
     order_phone INT NOT NULL,
     order_food TEXT NOT NULL,
     order_price INT NOT NULL,
-    order_food_count INT NOT NULL
+    order_food_count INT NOT NULL,
+    created_at timestamptz DEFAULT CURRENT_TIMESTAMP;   
 );
 
