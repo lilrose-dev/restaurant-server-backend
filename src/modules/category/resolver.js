@@ -10,8 +10,7 @@ module.exports = {
             return await model.newCategory(name)
         },
         updateCategory: async(_, { name, id}) => {
-            await model.updateCategory( name, id)
-            return 'Category is updated!'
+            return await model.updateCategory( name, id)
         },
         delCategory: async(_, {id}) => {
             await model.delCategory(id)
