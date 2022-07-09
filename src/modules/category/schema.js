@@ -12,7 +12,7 @@ module.exports = gql`
 
     type Mutation{
         newCategory(name: String!):Category
-        updateCategory(name: String!, id: ID!): Category
+        updateCategory(name: String!, id: ID!): String
         delCategory(id: ID!): String
     }
 
