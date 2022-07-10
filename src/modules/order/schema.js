@@ -10,7 +10,7 @@ module.exports = gql`
         foodName: String!
         price: Int!
         count: Int!
-        time: Time!
+        createdAt: Time
     }
 
     extend type Query{
