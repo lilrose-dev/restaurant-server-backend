@@ -1,6 +1,7 @@
 const {gql} = require('apollo-server')
 
 module.exports = gql`
+    scalar Time
     type Order{
         id: ID!
         userName: String!
@@ -9,7 +10,7 @@ module.exports = gql`
         foodName: String!
         price: Int!
         count: Int!
-        
+        time: Time!
     }
 
     extend type Query{
