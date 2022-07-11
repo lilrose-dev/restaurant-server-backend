@@ -68,7 +68,7 @@ INSERT INTO foods(food_name, branch_id, food_price)VALUES('Lag`mon', 6, 25000);
 
 INSERT INTO foods(food_name, branch_id, food_price)VALUES('Beshteks', 7, 26000);
 INSERT INTO foods(food_name, branch_id, food_price)VALUES('Bistrogin', 7, 17000);
-INSERT INTO foods(food_name, branch_id, food_price)VALUES('Palov', 18000);
+INSERT INTO foods(food_name, branch_id, food_price)VALUES('Palov',7, 18000);
 
 INSERT INTO foods(food_name, branch_id, food_price)VALUES('Osh', 8, 18000);
 INSERT INTO foods(food_name, branch_id, food_price)VALUES('Shashlik', 8, 19000);

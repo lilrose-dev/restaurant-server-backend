@@ -8,20 +8,20 @@ CREATE TABLE categories(
 CREATE TABLE restaurants(
     restaurant_id SERIAL PRIMARY KEY,
     restaurant_name TEXT NOT NULL,
-    category_id INT REFERENCES categories(category_id) NOT NULL
+    category_id INT NOT NULL REFERENCES categories(category_id) ON DELETE CASCADE
 );
 
 CREATE TABLE branches(
     branch_id SERIAL PRIMARY KEY NOT NULL,
     branch_name TEXT NOT NULL,
-    restaurant_id INT REFERENCES restaurants(restaurant_id) NOT NULL
+    restaurant_id INT NOT NULL REFERENCES restaurants(restaurant_id) ON DELETE CASCADE
 );
 
 
 CREATE TABLE foods(
     food_id SERIAL PRIMARY KEY NOT NULL,
     food_name TEXT NOT NULL,
-    branch_id INT REFERENCES branches(branch_id) NOT NULL,
+    branch_id INT NOT NULL REFERENCES branches(branch_id) ON DELETE CASCADE,
     food_price INT NOT NULL
 );  
 
@@ -33,6 +33,6 @@ CREATE TABLE orders(
     order_food TEXT NOT NULL,
     order_price INT NOT NULL,
     order_food_count INT NOT NULL,
-    created_at timestamptz DEFAULT CURRENT_TIMESTAMP;   
+    created_at timestamptz DEFAULT CURRENT_TIMESTAMP
 );
 
