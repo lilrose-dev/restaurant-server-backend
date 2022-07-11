@@ -16,7 +16,7 @@ module.exports = gql`
 
     extend type Mutation{
         newFood(name: String!, branchID: ID!, price: Int!):Food
-        updateFood(name: String!, price: Int!, id: ID!): Food
+        updateFood(name: String!, price: Int!, id: ID!): String
         delFood(id: ID!): String
     }
 `

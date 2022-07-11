@@ -17,7 +17,8 @@ module.exports = {
             return createFood
         },
         updateFood: async(_, {name, price ,id}) => {
-            return await model.updateFood(name, price, id)
+            await model.updateFood(name, price, id)
+            return 'Food is updated'
         },
         delFood: async(_, {id}) => {
             await model.delFood(id)
